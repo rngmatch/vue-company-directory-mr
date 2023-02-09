@@ -22,7 +22,7 @@ const brand = ref('RNG Company Directory')
 nav {
   @apply flex h-20 bg-slate-900 text-slate-200;
   .wrapper {
-    @apply container mx-auto flex w-full items-center justify-between;
+    @apply flex·container·mx-auto w-full items-center justify-between;
     .brand {
       &-title {
         @apply text-2xl font-bold text-yellow-500;

@@ -22,7 +22,7 @@
 
 <style scoped lang="postcss">
 .wrapper {
-  @apply relative flex w-full items-stretch;
+  @apply flex·relative·w-full·items-stretch;
   .search {
     @apply rounded-md border-0 px-8 py-4 text-slate-700 placeholder-slate-400 outline-none focus:ring focus:ring-yellow-500;
   }
