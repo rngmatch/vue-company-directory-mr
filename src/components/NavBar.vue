@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-const brand = ref('🏢 Fake Company Directory')
+const brand = ref(' RNG Company Directory')
 </script>
 
 <template>
@@ -34,7 +34,7 @@ nav {
         @apply rounded-md px-4 py-2 hover:bg-yellow-500 hover:text-slate-900;
       }
       &-login {
-        @apply rounded-md bg-red-500 px-4 py-2 text-red-100 hover:bg-red-700;
+        @apply rounded-md bg-red-500 px-4 py-2 text-red-100 hover:bg-red-700 hover:font-bold hover:text-slate-900;
       }
     }
   }
