@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
 import MainSearch from './MainSearch.vue'
 </script>
@@ -9,8 +10,8 @@ import MainSearch from './MainSearch.vue'
   </div>
 </template>
 
-<style scoped lang="postcass">
-    .wrapper {
-    @apply flex flex-col container mx-auto py-4 gap-4;
+<style scoped lang="postcss">
+.wrapper {
+  @apply flex flex-col gap-4 py-4;
 }
 </style>
