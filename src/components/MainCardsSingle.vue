@@ -26,7 +26,7 @@ const selectCard = () => {
 
 <style scoped lang="postcss">
 .card {
-  @apply cursor-pointer overflow-hidden rounded-md bg-slate-100 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-slate-900;
+  @apply cursor-pointer overflow-hidden rounded-md bg-green-300 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-slate-900;
   &-image {
     img {
       @apply mx-auto rounded-full object-contain;
@@ -38,7 +38,7 @@ const selectCard = () => {
       @apply text-3xl font-thin tracking-wider text-slate-900;
     }
     &-job {
-      @apply -mt-2 text-sm font-bold text-green-700;
+      @apply -mt-2 text-sm font-bold text-slate-800;
     }
     &-email {
       @apply -mt-2 text-xs text-blue-700;
