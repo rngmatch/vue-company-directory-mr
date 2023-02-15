@@ -1,14 +1,20 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+
 import { useAuth } from '@/composables/useAuth'
-const { login } = useAuth()
+const { login, logout } = useAuth()
+const router = useRouter()
 
 const username = ref('')
 const password = ref('')
 
 const logUserIn = () => {
   if (login(username.value, password.value)) {
+    router.push({ name: 'Home' })
     console.log('logged in')
+  } else {
+    logout()
   }
 }
 </script>
@@ -17,7 +23,7 @@ const logUserIn = () => {
   <form class="login-form" @submit.prevent="logUserIn">
     <input v-model="username" type="text" placeholder="Username" />
     <input v-model="password" type="password" placeholder="Password" />
-    <button type="submit" class="bg-green-500 px-4 py-2" @click="login('admin', 'admin')">Log in</button>
+    <button type="submit" class="bg-green-500 px-4 py-2">Log in</button>
   </form>
 </template>
 

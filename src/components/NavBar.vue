@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 
-const { isAuthenticated } = useAuth()
+const { isAuthenticated, logout, user } = useAuth()
+
 const brand = ref(' RNG Company Directory')
 </script>
 
@@ -13,13 +14,18 @@ const brand = ref(' RNG Company Directory')
         <span class="brand-title">{{ brand }}</span>
       </RouterLink>
       <div class="menu">
-        <RouterLink :to="{ name: 'Home' }" class="menu-item">Departments</RouterLink>
         <div v-if="isAuthenticated">
-          <RouterLink :to="{ name: 'Login' }" class="menu-login">Login</RouterLink>
+          <p v-show="isAuthenticated" class="px-2 py-4">
+            Welcome back
+            <strong
+              ><i>{{ user.name }}</i></strong
+            >
+          </p>
+          <RouterLink :to="{ name: 'Settings' }" href="#" class="menu-item">Settings</RouterLink>
+          <button href="#" class="menu-logout" @click="logout">Logout</button>
         </div>
         <div v-else>
-          <RouterLink :to="{ name: 'Home' }" class="menu-item">Settings</RouterLink>
-          <RouterLink :to="{ name: 'Home' }" class="menu-logout">Logout</RouterLink>
+          <RouterLink :to="{ name: 'Login' }" href="#" class="menu-login">Login</RouterLink>
         </div>
       </div>
     </div>
