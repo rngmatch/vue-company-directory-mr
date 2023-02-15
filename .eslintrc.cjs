@@ -12,6 +12,7 @@ module.exports = {
     'prettier/prettier': ['error'],
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
+    vueIndentScriptAndStyle: ['error', 2],
   },
   env: {
     browser: true,
