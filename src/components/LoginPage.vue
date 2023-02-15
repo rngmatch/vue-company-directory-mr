@@ -1,12 +1,22 @@
 <script setup>
+import { ref } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 const { login } = useAuth()
+
+const username = ref('')
+const password = ref('')
+
+const logUserIn = () => {
+  if (login(username.value, password.value)) {
+    console.log('logged in')
+  }
+}
 </script>
 
 <template>
-  <form class="login-form" @submit="logUserIn">
-    <input type="text" placeholder="Username" />
-    <input type="password" placeholder="Password" />
+  <form class="login-form" @submit.prevent="logUserIn">
+    <input v-model="username" type="text" placeholder="Username" />
+    <input v-model="password" type="password" placeholder="Password" />
     <button type="submit" class="bg-green-500 px-4 py-2" @click="login('admin', 'admin')">Log in</button>
   </form>
 </template>

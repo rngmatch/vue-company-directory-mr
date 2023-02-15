@@ -31,7 +31,9 @@ export const useAuth = () => {
       const { name, role, email, username } = user
       isAuthenticated.value = true
       user.value = { name, role, email, username }
+      return true
     }
+    return false
   }
   return { isAuthenticated, user, login }
 }
