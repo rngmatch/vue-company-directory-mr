@@ -1,3 +1,3 @@
 <template>
-  <h1>Seetings Page</h1>
+  <h1>Settings Page</h1>
 </template>
